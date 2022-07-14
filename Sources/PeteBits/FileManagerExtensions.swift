@@ -14,12 +14,6 @@ extension FileManager {
         return paths[0]
     }
     
-    
-    public static var documentsDirectory: URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    }
-    
     ///Used to decode data from a given file.
     ///
     /// example call
@@ -45,7 +39,7 @@ extension FileManager {
     
     ///Used to encode data in a JSON file at the named filename
     ///
-    /// example call `FileManager.default.encode(yourData, tofile: "yourFileName")'`
+    /// example call `FileManager.default.encode(yourData, toFile: "yourFileName")'`
     public func encode<T: Codable>(_ data: T, toFile fileName: String) {
         let encoder = JSONEncoder()
         
