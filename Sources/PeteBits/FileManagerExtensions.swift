@@ -9,13 +9,13 @@ import SwiftUI
 
 extension FileManager {
     
-    func getDocumentsDirectory() -> URL {
+    public func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
     
     
-    static var documentsDirectory: URL {
+    public static var documentsDirectory: URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
@@ -25,7 +25,7 @@ extension FileManager {
     /// example call
     ///
     /// if let yourVar: yourType = FileManager.default.decode("yourFile")
-    func decode<T: Codable>(_ fromFile: String) -> T? {
+    public func decode<T: Codable>(_ fromFile: String) -> T? {
         let url = getDocumentsDirectory().appendingPathComponent(fromFile)
         let decoder = JSONDecoder()
         
@@ -46,7 +46,7 @@ extension FileManager {
     ///Used to encode data in a JSON file at the named filename
     ///
     /// example call `FileManager.default.encode(yourData, tofile: "yourFileName")'`
-    func encode<T: Codable>(_ data: T, toFile fileName: String) {
+    public func encode<T: Codable>(_ data: T, toFile fileName: String) {
         let encoder = JSONEncoder()
         
         do {
