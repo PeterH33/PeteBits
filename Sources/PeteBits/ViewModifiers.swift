@@ -30,7 +30,29 @@ struct TextFieldClearButton: ViewModifier {
 
 @available(iOS 13.0, *)
 public extension View {
+    ///Use this View Modifier to add a x.circle.fill button to a textfield that will clear the field when clicked.
     func textFieldClearButton(text: Binding<String>) -> some View {
         return self.modifier(TextFieldClearButton(text: text))
+    }
+}
+
+
+@available(iOS 13.0, *)
+public extension View {
+    @ViewBuilder func phoneOnlyStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            self.navigationViewStyle(.stack)
+        } else {
+            self
+        }
+    }
+}
+
+///This is a correction of the apple api that allows you to change the frame of picker scroll wheel.
+///
+///I am not certain that this is setup correctly to function but shall test soon.
+extension UIPickerView {
+    open override var intrinsicContentSize: CGSize {
+        return CGSize(width: UIView.noIntrinsicMetric, height: UIView.noIntrinsicMetric)
     }
 }
