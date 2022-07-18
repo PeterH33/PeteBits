@@ -33,6 +33,7 @@ The point of this class is to make the CoreHaptics system a bit easier to implem
 ## ViewModifiers
 *NOTE* Currently untested, just getting this in here before going to the bookstore.
 
-    Text Field Clear Button -
-    This modifier can be used to make a clear field button that appears when a bound field state has some value in it. 
-                    .textFieldClearButton(text: $binding)
+#### .textFieldClearButton -
+This modifier can be used to make a clear field button that appears when a bound field state has some value in it. 
+
+`.textFieldClearButton(text: $binding)`
