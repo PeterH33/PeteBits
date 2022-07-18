@@ -4,6 +4,13 @@ This package is comprised of a bunch of simple little fixes and wrappers for fun
 
 *Note* this is very much a work in progress as I try to figure out how to get packages to play nice. There are many bugs and errors, This would be version 0.0.4, I also need to learn how to properly set version numbers
 
+## Loading the package
+In xcode go to File> Add Packages... 
+
+In the window that pops up, in the top right corner type or paste https://github.com/PeterH33/PeteBits and accept, I do not have versioning setup properly let, but I will try to get that going and not damage and old functionality except to depricate things when apple does so for new versions of ios and xcode.
+
+Remember to import PeteBits in the files that need its functionality. I am considering adding PB to the begining of all public functions in this package to make it more likely to not conflict with other packages or future swift code.
+
 
 ## File Manager Extension Encode/Decode
 The file manager extension allows for quick easy encoding and decoding of JSON files
