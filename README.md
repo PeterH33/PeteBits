@@ -25,8 +25,8 @@ The point of this class is to make the CoreHaptics system a bit easier to implem
  Usage:
  1. Drop this file into a project.
  2. In the view or controller etc. you want to use haptics create an instance of the HapticManager class
- 3. use yourClassInstance?.playSlice to play the Slice haptic as defined below, use autocomplete to explore other samples
- 4. if you want to use an alternate code when haptics is not available, yourClassInstance?.playSlice ?? { what you want to do without haptics }()
+ 3. use `yourClassInstance?.playSlice` to play the Slice haptic as defined below, use autocomplete to explore other samples
+ 4. if you want to use an alternate code when haptics is not available, `yourClassInstance?.playSlice ?? { what you want to do without haptics }()`
  5. Define new haptic patterns following the pattern in the end of the Haptics file.
 
 
