@@ -37,6 +37,7 @@ public extension View {
 }
 
 
+
 @available(iOS 13.0, *)
 public extension View {
     ///This will remove the iPad style navigation from large format iPhones.

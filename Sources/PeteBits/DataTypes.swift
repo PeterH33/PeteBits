@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 ///Wrapper for NSCountedSet to provide type safety
 struct PBCountedSet<T: Any> {
     let internalSet = NSCountedSet()
